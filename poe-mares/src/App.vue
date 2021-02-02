@@ -1,21 +1,39 @@
 <template>
-  <div>
-<login/>
-  </div>
+	<div>
+		<div class="page-content">
+			<menu-superior />
+			
+			<div class="page-conteudo-interno">
+				<menu-lateral />
+				<novos-itens/>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-import Login from './components/login.vue'
- 
+import MenuSuperior from'./components/MenuSuperior.vue'
+import MenuLateral from './components/MenuLateral.vue'
+import NovosItens from './components/NovosItens.vue'
+
+
 
 export default {
   name: 'App',
   components: {
-   Login
+    MenuSuperior,
+    MenuLateral,
+    NovosItens,   
   }
 }
-</script>
+ </script>
 
-<style>
+ <style scoped>
+ .page-content{
+	 display:grid;
+ }
+ .page-conteudo-interno{
+	 display:flex;
+ }
+ </style>
 
-</style>

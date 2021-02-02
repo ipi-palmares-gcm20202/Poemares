@@ -1,81 +1,79 @@
 <template>
-  <div>
-    <div class="login-form card">
+   <div class="login-form card">
         
         <div class="img-container">
-       <img src="https://i.ibb.co/MPYXPFK/pp.jpg" alt="pp" border="0">
-
+            <img src="https://i.ibb.co/MPYXPFK/pp.jpg" alt="pp" border="0">
         </div>
 
-        <p class="blog-title">Bem vindo(a) ao BLOG POEMARES! Digite as suas credenciais.</p>
-
-        <div v-if="exibirMensagemErro" class="alert alert-danger">
-           <a> <strong>Erro!</strong> E-mail e/ou senha inválido(s)</a>.
-        </div>
+        <p class="blog-title">Criar nova conta</p>
 
         <div class="row">
             <form class="col s12">
+              <div class="row no-margin-bottom">
+                <div class="input-field col s12">
+                    <input id="nome" type="text" class="validate" v-model="nome">
+                    <label for="nome">Nome</label>
+                </div>
+              </div>
+
               <div class="row no-margin-bottom">
                 <div class="input-field col s12">
                   <input id="email" type="email" class="validate" v-model="email">
                   <label for="email">E-mail</label>
                 </div>
               </div>
-              <div class="row">
+              <div class="row no-margin-bottom">
                 <div class="input-field col s12">
                   <input id="password" type="password" class="validate" v-model="senha">
-                  <label for="password">Password</label>
+                  <label for="password">Senha</label>
                 </div>
               </div>
               <div class="row">
-                <a v-on:click="login" class="waves-effect waves-light btn btn-large Maroon botao-login">ENTRAR</a>
+                <div class="input-field col s12">
+                  <input id="confirmar-senha" type="password" class="validate" v-model="confirmacaoSenha">
+                  <label for="confirmar-senha">Confirmação de senha</label>
+                  <span v-if="senha != confirmacaoSenha" class="erro-senha"><i class="fa fa-times"></i>As senhas digitadas não conferem</span>
+                </div>
               </div>
               <div class="row">
-                  <p class="esqueceu-a-senha">Esqueceu a senha?</p>
+                <a :disabled="senha != confirmacaoSenha" v-on:click="cadastrar" class="waves-effect waves-light btn btn-large green botao-login">CADASTRAR</a>
               </div>
               <div class="row">
-                  <a class="waves-effect waves-light btn btn-large botao-login botao-novo-usuario">CADASTRE-SE AGORA</a>
+                  <a class="waves-effect waves-light btn btn-large botao-login botao-novo-usuario">JÁ POSSUO UMA CONTA</a>
               </div>
             </form>
           </div>
     </div>
-  </div>
+ 
 </template>
 
 <script>
- 
-
 export default {
-  name: 'login',
+    name: 'novo-usuario'
+
 }
-
-
 </script>
 
+
 <style>
-.login-form {
+ body {
+        background: rgba(0,0,0,0.03);
+    }
+
+    .login-form {
         width: 30vw;
         margin-left: 35vw;
         margin-top: 10vh;
-        text-align: center;
         padding: 40px;
-        background: rgba(0,0,0,0.03);
-      }
+    }
 
       .img-container {
         width: 150px;
-        height: 150px;
-        background: white;
-        border-radius: 80px;
-        padding-top: 0px;
-        border: 3px solid black;
         margin-left: 160px;
       }
 
       .img-container img {
         width: 150px;
-        border-radius: 80px;
-        height: 150px;
       }
 
       .botao-login {
@@ -84,14 +82,14 @@ export default {
 
       .blog-title {
         text-align: left;
-        color: #2eddcc;
+        color: #40E0D0;
         font-size: 16px;
         font-weight: bold;
         margin-top: 32px;
       }
 
       .esqueceu-a-senha {
-        color: 	#39d1cc;
+        color: #1a0dab;
         cursor: pointer;
         margin-bottom: 0;
       }
@@ -124,5 +122,16 @@ export default {
       .botao-novo-usuario:hover {
         background: #4CAF50 !important;
         color: white!important;
+      }
+
+      .erro-senha {
+        width: 100%;
+        text-align: left;
+        color: red;
+        font-size: 13px;
+      }
+
+      .erro-senha i {
+          margin-right: 5px;
       }
 </style>
