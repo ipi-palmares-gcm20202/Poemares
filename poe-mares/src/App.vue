@@ -1,39 +1,41 @@
 <template>
-	<div>
-		<div class="page-content">
-			<menu-superior />
-			
-			<div class="page-conteudo-interno">
-				<menu-lateral />
-				<novos-itens/>
-			</div>
-		</div>
-	</div>
+  <div>
+    <div class="page-content">
+      <menu-superior />
+
+      <div class="page-conteudo-interno">
+        <menu-lateral />
+       <principal/>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import MenuSuperior from'./components/MenuSuperior.vue'
-import MenuLateral from './components/MenuLateral.vue'
-import NovosItens from './components/NovosItens.vue'
+import MenuSuperior from "./components/MenuSuperior.vue";
+import MenuLateral from "./components/MenuLateral.vue";
+import Principal from './components/Principal.vue';
+
+
 
 
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     MenuSuperior,
     MenuLateral,
-    NovosItens,   
-  }
-}
- </script>
+    Principal,
+  
+  },
+};
+</script>
 
  <style scoped>
- .page-content{
-	 display:grid;
- }
- .page-conteudo-interno{
-	 display:flex;
- }
- </style>
-
+.page-content {
+  display: grid;
+}
+.page-conteudo-interno {
+  display: flex;
+}
+</style>

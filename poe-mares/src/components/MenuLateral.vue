@@ -4,9 +4,9 @@
             <i class="fa fa-user"></i>
                 <span>Poemares</span>
         </div>
-
-             <div class="separator">
-
+        
+            <div class="separator">
+ 
                 <div class="sidebar-menu">
                     <div class="sidebar-menu-item ">
                         <i class="fa fa-home"></i>

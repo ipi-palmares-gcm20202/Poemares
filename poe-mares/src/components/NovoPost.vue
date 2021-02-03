@@ -5,7 +5,7 @@
               <div class="col s12">
                 <a href="#!" class="breadcrumb">Início</a>
                 <a href="#!" class="breadcrumb">Itens</a>
-                <a href="#!" class="breadcrumb">Novos-Itens</a>
+                <a href="#!" class="breadcrumb">Novo-Post</a>
                
                
               </div>
@@ -13,7 +13,7 @@
           </nav>
 
             <div class="new-itens-content card">
-                <h4> <i class="fa fa-home"></i> Novos-Itens</h4>
+                <h4> <i class="fa fa-home"></i> Novo-Post</h4>
 
                 <div class="row">
                     <form class="col s12">
