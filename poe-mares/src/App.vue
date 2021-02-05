@@ -4,8 +4,9 @@
       <menu-superior />
 
       <div class="page-conteudo-interno">
-        <menu-lateral />
-       <principal/>
+        <menu-lateral/>
+        <principal/>
+        
       </div>
     </div>
   </div>
@@ -20,12 +21,14 @@ import Principal from './components/Principal.vue';
 
 
 
+
 export default {
   name: "App",
   components: {
     MenuSuperior,
     MenuLateral,
     Principal,
+    
   
   },
 };
