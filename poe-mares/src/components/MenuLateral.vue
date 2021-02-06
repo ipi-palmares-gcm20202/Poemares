@@ -30,7 +30,7 @@
 
 <script>
 export default {
-    name:'menu-lateral'
+    name:'menu-lateral',
 }
 </script>
 

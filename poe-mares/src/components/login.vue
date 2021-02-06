@@ -34,7 +34,7 @@
                   <p class="esqueceu-a-senha">Esqueceu a senha?</p>
               </div>
               <div class="row">
-                  <a class="waves-effect waves-light btn btn-large botao-login botao-novo-usuario">CADASTRE-SE AGORA</a>
+                  <a v-on:click="Principal"   class="waves-effect waves-light btn btn-large botao-login botao-novo-usuario">CADASTRE-SE AGORA</a>
               </div>
             </form>
           </div>
@@ -47,7 +47,14 @@
 
 export default {
   name: 'login',
-}
+
+
+ methods: {
+    Principal() {
+      this.$router.push({ name: "Principal" });
+    },
+ }
+ };
 
 
 </script>

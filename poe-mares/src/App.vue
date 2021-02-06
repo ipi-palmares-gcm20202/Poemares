@@ -1,44 +1,46 @@
 <template>
   <div>
-    <div class="page-content">
-      <menu-superior />
+    <router-view />
 
-      <div class="page-conteudo-interno">
-        <menu-lateral/>
-        <principal/>
-        
+    <div>
+      <div class="page-content">
+        <menu-superior />
+
+        <div class="page-conteudo-interno">
+          <menu-lateral />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import MenuSuperior from "./components/MenuSuperior.vue";
-import MenuLateral from "./components/MenuLateral.vue";
-import Principal from './components/Principal.vue';
-
-
-
-
-
-
+import MenuSuperior from "./MenuSuperior.vue";
+import MenuLateral from "./MenuLateral.vue";
 export default {
   name: "App",
   components: {
-    MenuSuperior,
-    MenuLateral,
-    Principal,
-    
-  
-  },
-};
+  MenuSuperior,
+  MenuLateral,
+  }
+}
 </script>
 
- <style scoped>
-.page-content {
-  display: grid;
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-.page-conteudo-interno {
-  display: flex;
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
 </style>
